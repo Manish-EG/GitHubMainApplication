@@ -45,7 +45,10 @@ namespace GitHubMainApplication
                         Insertion.Insert(numbersArray, countOfNumbers);
                         countOfNumbers++;
                         break;
-                    case 2: break;
+                    case 2:
+                        GitHubMainApplication.DeletionOperation.Deletion(numbersArray, countOfNumbers);
+                        countOfNumbers--;
+                        break;
                     case 3: SortOperation sortOperation = new SortOperation(numbersArray, countOfNumbers);
                         break;
                     case 4:
