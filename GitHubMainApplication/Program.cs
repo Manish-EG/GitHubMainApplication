@@ -10,6 +10,7 @@ namespace GitHubMainApplication
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("hello");
         }
     }
 }
