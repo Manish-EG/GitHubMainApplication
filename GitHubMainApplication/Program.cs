@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GitHubMainApplication
 {
-    internal class Program
+    public class Program
     {
         static void displayOptions() {
             Console.ForegroundColor = ConsoleColor.Green;
@@ -15,17 +15,17 @@ namespace GitHubMainApplication
             Console.WriteLine("2- Delete an element");
             Console.WriteLine("3- Sort the elements");
             Console.WriteLine("4- Count of elements in the array");
-            Console.WriteLine("6- Compute the average of all values ");
-            Console.WriteLine("7- Find the maximum and minimum value");
-            Console.WriteLine("8- Calculate total of all the values");
-            Console.WriteLine("9- Exit");
+            Console.WriteLine("5- Compute the average of all values ");
+            Console.WriteLine("6- Find the maximum and minimum value");
+            Console.WriteLine("7- Calculate total of all the values");
+            Console.WriteLine("8- Exit");
             Console.WriteLine("----------------------------------------");
             Console.ForegroundColor= ConsoleColor.White;
             Console.Write("Enter your choice:");
         }
         static void Main(string[] args)
         {
-            int countOfNumbers;
+            int countOfNumbers=0;
             int[] numbersArray=new int[15];
             int choice;
 
@@ -37,29 +37,40 @@ namespace GitHubMainApplication
                 numbersArray[iterator]=Convert.ToInt32(Console.ReadLine());
             }
 
-            displayOptions();
-            choice=Convert.ToInt32(Console.ReadLine());
-            while (true) {
-                switch (choice) { 
-                case 1:
+            do {
+                displayOptions();
+                choice = Convert.ToInt32(Console.ReadLine());
+                switch (choice) {
+                    case 1:
+                        Insertion.Insert(numbersArray, countOfNumbers);
+                        countOfNumbers++;
                         break;
-                case 2:
+                    case 2:
                         GitHubMainApplication.DeletionOperation.Deletion(numbersArray, countOfNumbers);
                         countOfNumbers--;
                         break;
-                case 3:break;
-                case 4:break;
-                case 5:break;
-                case 6:break;
-                case 7:break;
-                case 8:break;
-                case 9:return;
-                default: Console.WriteLine("Invalid choice");break;
+                    case 3: SortOperation sortOperation = new SortOperation(numbersArray, countOfNumbers);
+                        break;
+                    case 4:
+                        CountingAndAverage countObj = new CountingAndAverage();
+                        countObj.count(countOfNumbers);
+                        break;
+                    case 5:
+                        CountingAndAverage averageObj = new CountingAndAverage();
+                        averageObj.average(numbersArray, countOfNumbers);
+                        break;
+                    case 6:
+                        Min_Max_Value minMaxValueObj= new Min_Max_Value();
+                        minMaxValueObj.findMinMaxValue(numbersArray, countOfNumbers);
+                        break;
+                    case 7: break;
+                    default: 
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Invalid choice");
+                        break;
                 }
 
-                displayOptions();
-                choice = Convert.ToInt32(Console.ReadLine());
-            }
+            } while(choice!=8);
 
         }
     }
