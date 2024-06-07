@@ -9,11 +9,11 @@ namespace GitHubMainApplication
     public class CountingAndAverage
     {
         // Method to count the number of elements
-        public void count(ref int count)
+        public void count( int count)
         {
             Console.WriteLine($"Number of elements in the array at present is {count}");
         }
-        public void average(ref int[] Storage, ref int count)
+        public void average( int[] Storage,  int count)
         {
             int average = 0;
             int total = 0;
