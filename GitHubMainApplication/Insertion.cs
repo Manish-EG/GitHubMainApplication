@@ -51,8 +51,7 @@ namespace GitHubMainApplication
                 switch (choice)
                 {
                     case 1:
-                        index = 0;
-                        AddElement(array, count, insertElement, index);
+                        AddElement(array, count, insertElement, index = 0);
                         break;
                     case 2:
                         Console.Write("Enter the position to insert element: ");
@@ -60,8 +59,7 @@ namespace GitHubMainApplication
                         AddElement(array, count, insertElement, index);
                         break;
                     case 3:
-                        index = count;
-                        AddElement(array, count, insertElement, index);
+                        AddElement(array, count, insertElement, index = count);
                         break;
                     default:
                         Console.WriteLine("Please select a valid option");
