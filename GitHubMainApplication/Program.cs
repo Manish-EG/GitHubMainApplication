@@ -46,7 +46,10 @@ namespace GitHubMainApplication
                     case 3: break;
                     case 4: break;
                     case 5: break;
-                    case 6: break;
+                    case 6:
+                        Min_Max_Value minMaxValueObj= new Min_Max_Value();
+                        minMaxValueObj.findMinMaxValue(numbersArray, countOfNumbers);
+                        break;
                     case 7: break;
                     default: 
                         Console.ForegroundColor = ConsoleColor.Red;
