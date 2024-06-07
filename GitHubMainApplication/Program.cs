@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GitHubMainApplication
 {
-    internal class Program
+    public class Program
     {
         static void displayOptions() {
             Console.ForegroundColor = ConsoleColor.Green;
@@ -25,7 +25,7 @@ namespace GitHubMainApplication
         }
         static void Main(string[] args)
         {
-            int countOfNumbers;
+            int countOfNumbers=0;
             int[] numbersArray=new int[15];
             int choice;
 
@@ -48,8 +48,14 @@ namespace GitHubMainApplication
                     case 2: break;
                     case 3: SortOperation sortOperation = new SortOperation(numbersArray, countOfNumbers);
                         break;
-                    case 4: break;
-                    case 5: break;
+                    case 4:
+                        CountingAndAverage countObj = new CountingAndAverage();
+                        countObj.count(countOfNumbers);
+                        break;
+                    case 5:
+                        CountingAndAverage averageObj = new CountingAndAverage();
+                        averageObj.average(numbersArray, countOfNumbers);
+                        break;
                     case 6:
                         Min_Max_Value minMaxValueObj= new Min_Max_Value();
                         minMaxValueObj.findMinMaxValue(numbersArray, countOfNumbers);
@@ -59,9 +65,13 @@ namespace GitHubMainApplication
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Invalid choice");
                         break;
+                case 6:break;
+                case 7:break;
+                case 8:return;
+                default: Console.WriteLine("Invalid choice");break;
                 }
 
-            } while (choice!=8);
+            } while(choice!=8);
 
         }
     }

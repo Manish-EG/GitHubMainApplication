@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CountingAndAverage.cs" />
     <Compile Include="Insertion.cs" />
     <Compile Include="Min_Max_Value.cs" />
     <Compile Include="Program.cs" />
