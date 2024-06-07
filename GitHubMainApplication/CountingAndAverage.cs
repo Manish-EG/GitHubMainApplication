@@ -17,7 +17,7 @@ namespace GitHubMainApplication
         {
             int average = 0;
             int total = 0;
-            for (int iterator = 0; iterator < Storage.Length; iterator++)
+            for (int iterator = 0; iterator < count; iterator++)
             {
                 //Hetting the sum of elements in the each iteration
                 total += Storage[iterator];

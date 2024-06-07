@@ -39,7 +39,7 @@ namespace GitHubMainApplication
 
             displayOptions();
             choice=Convert.ToInt32(Console.ReadLine());
-            while (true) {
+            do{
                 switch (choice) { 
                 case 1:break;
                 case 2:break;
@@ -56,7 +56,7 @@ namespace GitHubMainApplication
                 default: Console.WriteLine("Invalid choice");break;
                 }
 
-            } while (choice!=8);
+            } while(choice!=8);
 
         }
     }
