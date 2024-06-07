@@ -63,7 +63,9 @@ namespace GitHubMainApplication
                         Min_Max_Value minMaxValueObj= new Min_Max_Value();
                         minMaxValueObj.findMinMaxValue(numbersArray, countOfNumbers);
                         break;
-                    case 7: break;
+                    case 7:TotalOfAllValues totalOfAllValuesObj=new TotalOfAllValues();
+                        totalOfAllValuesObj.calculateTotalOfAllValues(numbersArray);
+                            break;
                     default: 
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Invalid choice");
