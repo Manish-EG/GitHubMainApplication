@@ -8,9 +8,13 @@ namespace GitHubMainApplication
 {
     public class SortOperation
     {
-        public SortOperation(int[] array) {
-            if (array.Length != 0)
+
+        int temperoryVariable,countOfElements;
+        public SortOperation(int[] array,int count) {
+            countOfElements=count;
+            if (count != 0)
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("1.Ascending order\n2.Descending order");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
@@ -25,16 +29,17 @@ namespace GitHubMainApplication
             }
             else
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("array is empty");
             }
 
         }
-        int temperoryVariable,count=1;
+        
 
         public  void SortAscending(int[] array) {
-            for (int i = 0; i < array.Length; i++)
+            for (int i = 0; i < countOfElements; i++)
             {
-                for (int j = 0; j < array.Length; j++)
+                for (int j = 0; j <countOfElements; j++)
                 {
                     if (array[i] < array[j])
                     {
@@ -44,17 +49,18 @@ namespace GitHubMainApplication
                     }
                 }
             }
-
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Array after sorting in Ascending order :");
-            for (int i = 0; i < array.Length; i++)
+            for (int i = 0; i <countOfElements; i++)
             {
                 Console.Write(array[i] + " ");
             }
+            Console.WriteLine();
         }
         public void SortDescending(int[] array) {
-            for (int i = 0; i < array.Length; i++)
+            for (int i = 0; i <countOfElements; i++)
             {
-                for (int j = 0; j < array.Length; j++)
+                for (int j = 0; j <countOfElements; j++)
                 {
                     if (array[i] > array[j])
                     {
@@ -64,11 +70,13 @@ namespace GitHubMainApplication
                     }
                 }
             }
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Array after sorting in Descending order :");
-            for (int i = 0; i < array.Length; i++)
+            for (int i = 0; i <countOfElements; i++)
             {
                 Console.Write(array[i] + " ");
             }
+            Console.WriteLine();
         }
     }
 }

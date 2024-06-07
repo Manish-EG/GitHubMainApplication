@@ -43,7 +43,8 @@ namespace GitHubMainApplication
                 switch (choice) {
                     case 1: break;
                     case 2: break;
-                    case 3: break;
+                    case 3: SortOperation sortOperation = new SortOperation(numbersArray, countOfNumbers);
+                        break;
                     case 4: break;
                     case 5: break;
                     case 6:
