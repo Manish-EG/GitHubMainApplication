@@ -41,7 +41,10 @@ namespace GitHubMainApplication
                 displayOptions();
                 choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice) {
-                    case 1: break;
+                    case 1:
+                        Insertion.Insert(numbersArray, countOfNumbers);
+                        countOfNumbers++;
+                        break;
                     case 2: break;
                     case 3: SortOperation sortOperation = new SortOperation(numbersArray, countOfNumbers);
                         break;
