@@ -37,24 +37,24 @@ namespace GitHubMainApplication
                 numbersArray[iterator]=Convert.ToInt32(Console.ReadLine());
             }
 
-            displayOptions();
-            choice=Convert.ToInt32(Console.ReadLine());
-            while (true) {
-                switch (choice) { 
-                case 1:break;
-                case 2:break;
-                case 3:break;
-                case 4:break;
-                case 5:break;
-                case 6:break;
-                case 7:break;
-                case 8:return;
-                default: Console.WriteLine("Invalid choice");break;
-                }
-
+            do {
                 displayOptions();
                 choice = Convert.ToInt32(Console.ReadLine());
-            }
+                switch (choice) {
+                    case 1: break;
+                    case 2: break;
+                    case 3: break;
+                    case 4: break;
+                    case 5: break;
+                    case 6: break;
+                    case 7: break;
+                    default: 
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Invalid choice");
+                        break;
+                }
+
+            } while (choice!=8);
 
         }
     }
