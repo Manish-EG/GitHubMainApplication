@@ -15,10 +15,11 @@ namespace GitHubMainApplication
             {
 
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("-----------------------MENU-------------------------");
+                Console.WriteLine("----------------------------------------");
                 Console.WriteLine("1. Delete the first element");
                 Console.WriteLine("2. Delete an element from specific position");
                 Console.WriteLine("3. Delete the last element");
+                Console.WriteLine("----------------------------------------");
                 Console.ForegroundColor = ConsoleColor.White;
                 int choice = int.Parse(Console.ReadLine());
                 Console.WriteLine("");
