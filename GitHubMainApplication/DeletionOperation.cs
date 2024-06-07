@@ -53,7 +53,7 @@ namespace GitHubMainApplication
                 array[index - 1] = array[index];
             }
             count--;
-            Console.WriteLine("Print the updated array:");
+            Console.WriteLine("Array after deleting:");
             for (int index = 0; index < count; index++)
             {
                 Console.Write(array[index] + " ");
