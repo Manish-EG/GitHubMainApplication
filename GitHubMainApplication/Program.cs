@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GitHubMainApplication
 {
-    internal class Program
+    public class Program
     {
         static void displayOptions() {
             Console.ForegroundColor = ConsoleColor.Green;
