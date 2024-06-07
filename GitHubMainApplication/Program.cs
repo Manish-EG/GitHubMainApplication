@@ -15,10 +15,10 @@ namespace GitHubMainApplication
             Console.WriteLine("2- Delete an element");
             Console.WriteLine("3- Sort the elements");
             Console.WriteLine("4- Count of elements in the array");
-            Console.WriteLine("6- Compute the average of all values ");
-            Console.WriteLine("7- Find the maximum and minimum value");
-            Console.WriteLine("8- Calculate total of all the values");
-            Console.WriteLine("9- Exit");
+            Console.WriteLine("5- Compute the average of all values ");
+            Console.WriteLine("6- Find the maximum and minimum value");
+            Console.WriteLine("7- Calculate total of all the values");
+            Console.WriteLine("8- Exit");
             Console.WriteLine("----------------------------------------");
             Console.ForegroundColor= ConsoleColor.White;
             Console.Write("Enter your choice:");
@@ -48,8 +48,7 @@ namespace GitHubMainApplication
                 case 5:break;
                 case 6:break;
                 case 7:break;
-                case 8:break;
-                case 9:return;
+                case 8:return;
                 default: Console.WriteLine("Invalid choice");break;
                 }
 
