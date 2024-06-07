@@ -45,10 +45,10 @@ namespace GitHubMainApplication
                 case 2:break;
                 case 3:break;
                 case 4: CountingAndAverage countObj = new CountingAndAverage();
-                        countObj.count(ref countOfNumbers);
+                        countObj.count( countOfNumbers);
                         break;
                 case 5: CountingAndAverage averageObj = new CountingAndAverage();
-                        averageObj.average(ref numbersArray,ref countOfNumbers);
+                        averageObj.average( numbersArray, countOfNumbers);
                         break;
                 case 6:break;
                 case 7:break;
