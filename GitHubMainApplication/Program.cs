@@ -65,10 +65,6 @@ namespace GitHubMainApplication
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Invalid choice");
                         break;
-                case 6:break;
-                case 7:break;
-                case 8:return;
-                default: Console.WriteLine("Invalid choice");break;
                 }
 
             } while(choice!=8);
