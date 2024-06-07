@@ -37,18 +37,33 @@ namespace GitHubMainApplication
                 numbersArray[iterator]=Convert.ToInt32(Console.ReadLine());
             }
 
-            displayOptions();
-            choice=Convert.ToInt32(Console.ReadLine());
-            do{
-                switch (choice) { 
-                case 1:break;
-                case 2:break;
-                case 3:break;
-                case 4: CountingAndAverage countObj = new CountingAndAverage();
-                        countObj.count( countOfNumbers);
+            do {
+                displayOptions();
+                choice = Convert.ToInt32(Console.ReadLine());
+                switch (choice) {
+                    case 1:
+                        Insertion.Insert(numbersArray, countOfNumbers);
+                        countOfNumbers++;
                         break;
-                case 5: CountingAndAverage averageObj = new CountingAndAverage();
-                        averageObj.average( numbersArray, countOfNumbers);
+                    case 2: break;
+                    case 3: SortOperation sortOperation = new SortOperation(numbersArray, countOfNumbers);
+                        break;
+                    case 4:
+                        CountingAndAverage countObj = new CountingAndAverage();
+                        countObj.count(countOfNumbers);
+                        break;
+                    case 5:
+                        CountingAndAverage averageObj = new CountingAndAverage();
+                        averageObj.average(numbersArray, countOfNumbers);
+                        break;
+                    case 6:
+                        Min_Max_Value minMaxValueObj= new Min_Max_Value();
+                        minMaxValueObj.findMinMaxValue(numbersArray, countOfNumbers);
+                        break;
+                    case 7: break;
+                    default: 
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Invalid choice");
                         break;
                 case 6:break;
                 case 7:break;
