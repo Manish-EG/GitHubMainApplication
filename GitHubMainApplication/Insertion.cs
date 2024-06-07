@@ -24,7 +24,7 @@ namespace GitHubMainApplication
             }
             for(int iterator = 0; iterator < count; iterator++)
             {
-                Console.WriteLine(array[iterator]);
+                Console.Write($"{array[iterator]} ");
             }
         }
         public static void Insert(int[] array, int count)
