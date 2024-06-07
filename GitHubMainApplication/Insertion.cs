@@ -15,16 +15,16 @@ namespace GitHubMainApplication
             int elementAtIndex = array[index];
             array[index] = insertElement;
             int temporary;
-            for (int iteration = index+1; iteration < count; iteration++)
+            for (int iterator = index+1; iterator < count; iterator++)
             {
-                temporary = array[iteration];
-                array[iteration] = elementAtIndex;
+                temporary = array[iterator];
+                array[iterator] = elementAtIndex;
                 elementAtIndex = temporary;
                
             }
-            for(int i=0;i< count; i++)
+            for(int iterator = 0; iterator < count; iterator++)
             {
-                Console.WriteLine(array[i]);
+                Console.WriteLine(array[iterator]);
             }
         }
         public static void Insert(int[] array, int count)
